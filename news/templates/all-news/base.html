@@ -4,11 +4,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    {%block styles%}
-    {%bootstrap_css%}
-    <link rel="stylesheet" href="{% static 'css/basenews.css'%}" type="text/css">
-  {%endblock%}
-
     {%if title%}
     <title>
       Moringa Tribune - {{title}}
@@ -17,8 +12,11 @@
     <title>Moringa Tribune</title>
     {%endif%}
 
-
-   
+    {%block styles%}
+    {%bootstrap_css%}
+    <link rel="stylesheet" href="{% static 'css/basenews.css' %}">
+  {%endblock%}
+  
   </head>
 
   <body>
