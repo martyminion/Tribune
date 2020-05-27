@@ -30,8 +30,10 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG',default=False,cast=bool)
 
 
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 
-
+APPEND_SLASH=False
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news.apps.NewsConfig',
-    'bootstrap4'
+    'bootstrap4',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -152,6 +155,5 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 #this allows acces to uploaded images through localhost:8000/media/articles/image.jpg 
-
 #configure Djangoappfor Heroku
 django_heroku.settings(locals())

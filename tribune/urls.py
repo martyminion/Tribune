@@ -15,9 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.contrib.auth import views
+from django_registration.backends.one_step.views import RegistrationView
+from django.contrib.auth.views import LoginView
 
 #note the syntax for 3.0.6
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('news.urls')),
+    path('accounts/register/',RegistrationView.as_view(success_url='/'),name='django_registration_register'),
+    path('accounts/',include('django_registration.backends.one_step.urls')),
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/login', LoginView.as_view(redirect_field_name = '/',success_url = '/'),name='login'),
+    path('tinymce/',include('tinymce.urls')),
+    
 ]
+
+
+#

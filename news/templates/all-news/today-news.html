@@ -14,12 +14,13 @@
       <a href="{%url 'article' news_item.id %}">
         <h2 class="text-center"> {{news_item.title}}</h2>
       </a>
-      <img src="{{news_item.article_image.url}}" alt="newsimage" class="img-responsive">
+      <img src="{{news_item.article_image.url}}" alt="newsimage" class=" image img-responsive" width="200" height="200">
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
       <p>{{news_item.post|truncatechars:200}}...</p>
     </div>
   </div>
+  <hr>
   {%empty%}
   <div class="row">
     <h2 class="text-center"> There are No News Items</h2>
