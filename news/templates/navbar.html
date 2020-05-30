@@ -9,12 +9,12 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="{%url 'newsToday' %}">The Moringa Tribune</a>
+        <a class="navbar-brand" href="#">InstaPic</a>
       </div>
       <!--Adding a search form-->
 
       <div class="col-sm-4 col-md-4 navbar-right">
-        <form class="navbar-form" role="search" action="{%url 'search_results' %}">
+        <form class="navbar-form" role="search" action="">
           <div class="input-group">
             <input type="text" name="article" class="form-control" placeholder="Search Article">
             <div class="input-group-btn">
@@ -35,10 +35,10 @@
               </a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="{% url 'newsToday' %}">Home</a>
+                  <a href="#">Home</a>
                 </li>
                 <li>
-                  <a href="{% url 'new-article' %}">New Article</a>
+                  <a href="#">New Article</a>
                 </li>
                 <li>
                   <a href="/accounts/password_change/">Change Password</a>
